@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dist-ssr/
+
+# testing
+**/coverage/
+**/cypress/
+**/tests/

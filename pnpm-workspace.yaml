@@ -1,0 +1,13 @@
+packages:
+  # all packages in direct subdirs of packages/
+  - "aigc-apps/**"
+  # all packages in subdirs of components/
+  - "job-search/**"
+  - "job-find-playwright/**"
+
+  # all packages of axios request/
+  - "shares/**"
+
+  # exclude packages that are inside test directories
+  - "!**/tests/**"
+  - "!**/cypress/**"

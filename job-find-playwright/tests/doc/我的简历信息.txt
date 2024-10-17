@@ -1,0 +1,10 @@
+以下是我所掌握的前端技术：
+1.掌握 Web 基础: HTML/HTML5、CSS/CSS3、JS(ES6+)、TypeScript 及网络协议
+2.熟悉技术栈: Vue & React 及其实现原理,还有其周边生态
+3.熟悉 NodeJs 生态体系下工具：Webpack/ Vite, Babel/Swc，PostCss/Sass/Less, Npm/Yarn/Pnpm，Eslint，
+Mock.js 等，能运用 Express.js/Koa.js +MySQL 开发后端服务，并能运用 Jest/Vitest
+做前端单元测试
+4.了解前端工程化体系建设，常用设计模式，以及编程设计思想
+5.了解微前端的运用，并理解其原理。能运用 monorepo+micro-app 架构开发项目
+6.数据可视化经验，熟悉跨平台响应式布局 web 开发，熟悉 Echarts 使用，并了解其原理
+7.有跨端开发经验，熟悉 Taro 开发多端应用，并理解其原理；熟悉 H5 开发及相关 UI 使用

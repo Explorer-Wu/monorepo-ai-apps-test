@@ -1,0 +1,57 @@
+{
+	// "ts-node": {
+	// 	// "swc": true,
+	// 	"esm": true
+	// },
+	"compilerOptions": {
+		"target": "ESNext",
+		// For spec compilance.
+		// `true` by default if the `target` is `ES2020` or higher.
+		// Explicitly set it to `true` here in case some users want to overwrite the `target`.
+		"useDefineForClassFields": true,
+		// "module": "ESNext",
+		"module": "CommonJS",
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"typeRoots": ["node_modules/@types", "./typings"],
+		// types设置typeRoots目录下需要包括在编译之中的类型模块。默认情况下，该目录下的所有类型模块，都会自动包括在编译之中
+		"types": ["node"],
+		"baseUrl": ".",
+		// "rootDir": "./src",
+		"rootDir": ".",
+		"outDir": "dist",
+		// 路径映射，别名
+		"paths": {
+			"@/*": ["./src/*"],
+			"@tests/": ["./tests/*"]
+		},
+
+		/* Bundler mode */
+		// 一个模块导入解析算法，模仿Node.js实时搜索模块的方式
+		"moduleResolution": "Node",
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		// esModuleInterop允许我们将ES6模块编译为commonjs模块
+		"esModuleInterop": true,
+		"removeComments": false,
+		"forceConsistentCasingInFileNames": true,
+		"declaration": true,
+
+		/* Linting */
+		"strict": true,
+		"sourceMap": false,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"skipLibCheck": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"allowSyntheticDefaultImports": true
+	},
+	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/domOperationMock.cts", "src/*.cts", "playwright.config.ts", "tests", "tests-examples", "typings"],
+	/*** 不进行类型检查的文件 ***/
+	// ts 排除的文件, "exclude"默认情况下会排除node_modules，bower_components，jspm_packages和<outDir>目录
+	"exclude": ["node_modules", "dist", "src/**/__tests__/*", "tests/**/*", "coverage", "scripts", "**/*.js", "**/**/*.js", ".{idea,git,cache,output,temp}"]
+	// “项目引用（Project References）” 功能，允许用户为项目的不同部分使用不同的 TypeScript 配置。
+	// "references": [{ "path": "./tsconfig.node.json" }]
+}
